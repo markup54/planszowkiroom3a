@@ -16,9 +16,9 @@ public interface PlanszowkiDAO {
     public void wstawDoBazyKilkaPlanszowek(Planszowka ... planszowki);
 
     @Query("Select * from planszowki")
-    public List<Planszowka> zwrocWszystkiePlanszowki();
+    public LiveData<List<Planszowka>> zwrocWszystkiePlanszowki();
 
     @Query("Select * from planszowki where :liczbaGraczy<=maxLiczbaOsob and :liczbaGraczy>=minLiczbaOsob")
-    public List<Planszowka> zwrocPlanszowkiZLiczbaGraczy(int liczbaGraczy);
+    public LiveData<List<Planszowka>> zwrocPlanszowkiZLiczbaGraczy(int liczbaGraczy);
 
 }
