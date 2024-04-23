@@ -1,5 +1,6 @@
 package pl.zabrze.zs10.planszowkiroom3a;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;

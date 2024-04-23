@@ -11,7 +11,7 @@ public abstract class PlanszowkiDatabase extends RoomDatabase {
 
     public abstract PlanszowkiDAO planszowkiDAO();
 
-    private static PlanszowkiDatabase instancjaBazyDanych;
+    private static volatile PlanszowkiDatabase instancjaBazyDanych;
 
     public static PlanszowkiDatabase zwrocObiektBazyDanych(Context context){
         if(instancjaBazyDanych == null){
